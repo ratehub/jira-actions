@@ -1,5 +1,5 @@
-name: List all the versions in a Project
-description: JIRA integration with Github Actions to list all the versions in a project
+name: CHeck if the release version exists
+description: JIRA integration with Github Actions to check if the required version exists
 inputs:
   jira-username:  # id of input
     description: 'JIRA username for authentication'
