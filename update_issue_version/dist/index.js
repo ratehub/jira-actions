@@ -212,7 +212,8 @@ const atlassianDomain = core.getInput('atlassian-domain');
 const projectId = core.getInput('jira-project-id');
 const commitMessage = core.getInput('commit-message');
 const latestTag = core.getInput('latest-git-tag');
-const issueIdRegex = /((?!([A-Z0-9a-z]{1,10})-?$)[P]{1}[A-Z0-9]+-\d+)/g;
+const regex = core.getInput('regex');
+const issueIdRegex = new RegExp(regex,'g');
 const issueId = commitMessage.match(issueIdRegex);
 const release = core.getInput('which-release');
 
@@ -276,6 +277,7 @@ async function assignFixVersion() {
 }
 
 assignFixVersion();
+
 
 /***/ }),
 
