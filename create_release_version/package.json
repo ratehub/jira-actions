@@ -1,0 +1,29 @@
+{
+  "name": "jira-actions-create-release-version",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "release": "standard-version",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ratehub/jira-actions.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ratehub/jira-actions/issues"
+  },
+  "homepage": "https://github.com/ratehub/jira-actions#readme",
+  "dependencies": {
+    "@actions/core": "^1.2.6",
+    "@actions/github": "^4.0.0",
+    "@jsdevtools/version-bump-prompt": "^6.1.0",
+    "git-latest-tag": "0.0.6",
+    "jira-client": "^6.21.1",
+    "node-fetch": "^2.6.1"
+  }
+}

@@ -1,0 +1,28 @@
+name: List all the versions in a Project
+description: JIRA integration with Github Actions to list all the versions in a project
+inputs:
+  jira-username:  # id of input
+    description: 'JIRA username for authentication'
+    required: true
+  jira-api-token:
+    description: 'JIRA API token for authentication'
+    required: true
+  jira-project-id: 
+    description: 'JIRA Project ID'
+    required: true
+  atlassian-domain:
+    description: 'Atlassian JIRA domain URI'
+    required: true
+  latest-git-tag:
+    description: 'Latest git tag in the repo'
+    required: true
+  which-release:
+    description: 'Either next release or next release to be checked'
+    required: true  
+  coverage-command:
+    description: 'Coverage command to execute'
+    required: true
+    default: 'npm ci'
+runs:
+  using: node12 
+  main: 'dist/index.js'
