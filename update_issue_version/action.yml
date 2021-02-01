@@ -1,0 +1,28 @@
+name: Update the release version in JIRA ticket
+description: JIRA integration with Github Actions to update the release version in JIRA ticket
+inputs:
+  jira-username:  # id of input
+    description: 'JIRA username for authentication'
+    required: true
+  jira-api-token:
+    description: 'JIRA API token for authentication'
+    required: true
+  jira-project-id: 
+    description: 'JIRA Project ID'
+    required: true
+  atlassian-domain:
+    description: 'Atlassian JIRA domain URI'
+    required: true
+  latest-git-tag:
+    description: 'Latest git tag in the repo'
+    required: true
+  commit-message:
+    description: 'Event trigger commit message to retrieve Issue ID'
+    required: true
+  which-release:
+    description: 'Either current release or next release to be checked for'
+    required: true 
+runs:
+  using: node12 
+  main: 'dist/index.js'
+
